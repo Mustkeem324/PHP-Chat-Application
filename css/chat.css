@@ -1,0 +1,138 @@
+html, body {
+  overflow-x: hidden;
+}
+
+::root {
+  --message-color: #fff;
+}
+
+#waves {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100vw;
+}
+
+#message-input-container {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: TranslateX(-50%);
+  width: 50vw;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+#message-input {
+  width: calc(100%);
+  height: 100%;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: padding-box;
+  resize: horizontal;
+  font-size: 24px;
+  color: #000;
+}
+
+#chat-container {
+  position: absolute;
+  top: 0px;
+  left: 12px;
+  width: 100vw;
+  height: 84vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-bottom: 36px;
+  padding-top: 12px;
+}
+
+
+.message {
+  width: 100%;
+  min-height: 36px;
+  height: fit-content;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.message-username {
+  color: #adadad;
+  position: absolute;
+  font-size: 20px;
+  top: 0px;
+  left: 60px;
+  cursor: pointer;
+}
+
+.message-username:hover {
+  text-decoration: underline;
+}
+
+.message .message-content {
+  width: calc(100% - 144px);
+  height: fit-content;
+  display: block;
+  font-size: 16px;
+  cursor: text;
+  white-space: pre-wrap;
+  box-sizing: padding-box;
+  color: white;
+  position: relative;
+  left: 12px;
+  top: 24px;
+  text-wrap: 0;
+  word-wrap: break-word;
+}
+
+.message:not(:has(.message-top-container)) > .message-content {
+  top: 0px;
+  left: 60px;
+}
+
+.message:not(:has(.message-top-container)) {
+  margin-bottom: 0px;
+}
+
+.message-pfp {
+  height: 48px;
+  width: 48px;
+  border-radius: 9999px;
+}
+
+.message-top-container {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.message-top-container * {
+  float: left;
+}
+
+.box {
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 16px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#scroll-to-bottom-elem {
+  position: absolute;
+  bottom: 24px;
+  left: 50vw;
+  transform: TranslateX(-50%);
+  user-select: none;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  
+}
+
+#scroll-to-bottom-elem img {
+  height: 100%;
+  width: 100%;
+}

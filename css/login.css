@@ -1,0 +1,72 @@
+html, body {
+  background-image: url("/assets/images/login-background.svg") !important;
+  background-size: cover;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+#login-container {
+  width: calc(30vw - 8vw);
+  height: calc(60vh - 8vw);
+  position: absolute;
+  top: 50vh;
+  right: 16vw;
+  transform: TranslateY(-50%);
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 4vw;
+}
+
+#login-container * {
+  width: calc(100%);
+}
+
+#login-container input {
+  --login-accent: #f0f0f0;
+  border: none !important;
+  outline: none !important;
+  background-color: var(--login-accent) !important;
+  border-radius: 9999px;
+  padding: 16px;
+  box-sizing: padding-box;
+  margin-bottom: 12px;
+}
+
+#login-container input:autofill {
+  background-color: var(--login-accent) !important;
+}
+
+#login-container input[type=submit] {
+  --login-button: #003d6f;
+  --login-button-brighter: #005aa4 ;
+  background-color: var(--login-button) !important;
+  width: 50%;
+  color: #fff;
+  position: relative;
+  left: 50%;
+  transform: TranslateX(-50%);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#login-container input[type=submit]:hover {
+  background-color: var(--login-button-brighter) !important;
+}
+
+#login-container h1 {
+  width: fit-content !important;
+  position: relative;
+  left: 50%;
+  transform: TranslateX(-50%);
+}
+
+#login-container #other-login {
+  position: absolute;
+  bottom: 72px;
+  left: 50% !important;
+  width: fit-content !important;
+  transform: TranslateX(-50%);
+  text-wrap: nowrap;
+  word-wrap: wrap;
+}
